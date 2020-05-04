@@ -5,10 +5,11 @@ The aim of this project is to implement k-medoids clustering algorithm and test 
 
 #### Agenda
 1. Algorithm description
-2. Testing on mocked data
-3. Testing time complexity
-4. Testing on real data
-5. Summary 
+2. Implementation
+3. Testing on mocked data
+4. Testing time complexity
+5. Testing on real data
+6. Summary 
 
 #### 1. Algorithm Description
 K-medoids is a partitional clustering algorithm which is modified version of K-means algorithm. Both of them aims to minimizing squared error, however K-medoids is more robust to noise. In K-medoids data points are chosen to be medoids, but in K-means the means are chosen as centroids. 
@@ -27,8 +28,25 @@ Algorithm is as follows:
 
 Adventage of K-medoids is its simplicity. It is not the most efficient algorithm however and is mostly used with small datasets. It's time complexity is O(k(n-k)^2).
 
-#### Testing on Mocked Dataset
+#### 2. Implementation
+
+#### 3. Testing on Mocked Dataset
 Steps for creating mocked dataset:
 - Initialize k means, for this case points (0, 0), (10, 5), (0, 10) were chosen
 - For each cluster create N = 100 multivariate normal points which covariance equals to [ [2,0] [0,2] ]
-- Concanate members of each cluster into one dataset assigning them class number of each cluster
+- Concanate members of each cluster into one dataset (total size of dataset is 3 * N x 2)
+- create 3 * N x 1 array with labels to compare result of clastering with actual clusters
+
+So the final input of the training dataset is an array of dim 3*N x 2
+
+The sample dataset and its visualization can be seen at the pictures:
+<p align="center">
+  <img src = "https://imgur.com/W6q29WS.png"/>
+</p>
+
+And at the picture above the result of the first clustering can be seen:
+<p align="center">
+  <img src = "https://imgur.com/Mj20djM.png"/>
+</p>
+
+As can be seen, the algorithm works perfectly on the simple, training dataset.
