@@ -93,4 +93,18 @@ The visualisation of dataset can be seen at the picture below:
 </p>
 
 #### Comparison of Algorithms
-As the input to the every algorithm the array of size 150x4 were given. To predict the cluster for 
+Before training and testing algorithms the dataset was splited into training and testing sets in 100:50 ratio.
+Each point were assigned to the set only once and were chosen randomly. The final input for the algorithms was array of float numbers with dimensionality 100X4. Than, to predict labels for testing dataset the array of 50x4 were passed to predict function of each model.
+
+Because of small size of the dataset the cross validation was used, which means that testing phase were executed 200 times, and the accuracy and diff values are mean values from those iterations.
+
+The final result can be seen below:
+
+
+| Dataset          | Accuracy, test     | Accuracy, test | Differences, train | Differences, test |
+|-------------------------------------------------------------------------------------------------|
+| Algorithm        |   ----------- |-----------|-----------------|
+| My K-medoid      | 0.7974      | 0.0652    | 0.1374          |
+| Sklearn K-medoid | 0.7894      | 0.0695    | 0.1410          |
+| Sklearn K-means  | 0.8372      | 0.1455    | 0.0173          |
+
