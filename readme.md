@@ -37,18 +37,21 @@ This section consits of class k_medoids and one helper function for calculating 
 
 - **k** - number of cluster, value passed by parameter while object creation
 - **max_iter** - maximal number of iterations of the algorithm, value passed by parameter while object creation
-- **converged_count** - counter which decides weather algorithm converged. Initially set to 0, increments its value to 1 if the next random k-medoid doesn't gives better result than current.
+- **is_converged** - flag which decides weather algorithm converged. Initially set to 0, set its value to 1 if any other k-medoid gives better result than current.
 - **medoids_cost** - list of distances from the nearest medoids, initially set to empty list. It is cleared every each iteration.
 
 and five functions:
 
 - **initMedoids(self, X)** - chooses K random medoids from dataset X, which is passed by a parameter.
 - **isConverged(self, new_medoids)** - checks wether new_medoids are the same as the current.
-- **updateMedoids(self, X, labels)** - iterate converged_count by one and checks weather new medoids gives smaller mean error than the current ones. If so, it set new medoids as medoids and set converged_count to 0. Takes dataset X and labels as the arguments
-- **fit(self, X)** - generate new medoids, assigns each points to them basing on min eucledian distance and try to update the model. It runs in the loop for *max_iter* times, breaks when converged_count is greater or equal to *max_iter - k*. 
+- **updateMedoids(self, X, labels)** - checks weather new medoids gives smaller mean error than the current ones. If so, it set new medoids as medoids. If current medoids has been giving the best possible solution it sets is_converged flag to 1 and breaks the loop in *fit()* function. Takes dataset X and labels as the arguments
+- **fit(self, X)** - generate new medoids, assigns each points to them basing on min eucledian distance and try to update the model. It runs in the loop for *max_iter* times, breaks when is_converged is 1. 
 - **predict(self,data)** - callculates distance from each point which class is supposed to be predicted to each medoid and assign it to the nearest one. 
 
 #### Testing on Mocked Data
+This part creates dataset with mocked data which serves for checking weather the algorithm works properly on simple data. It visualizes created datapoints with it actuall classes and predicted ones. Than, the algorithm is executed many times on different size of testing data to checks time dependence on dataset size. 
+
+#### Comparision with Other Algorithms on Real Data
 
 
 ### 3. Testing on Mocked Dataset
