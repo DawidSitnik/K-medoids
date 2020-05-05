@@ -52,7 +52,7 @@ and five functions:
 This part creates dataset with mocked data which serves for checking weather the algorithm works properly on simple data. It visualizes created datapoints with it actuall classes and predicted ones. Than, the algorithm is executed many times on different size of testing data to checks time dependence on dataset size. 
 
 #### Comparision with Other Algorithms on Real Data
-
+In this part the algorithm is tested on *Iris Dataset* and compared with implementation of K-medoid from *sklearn library* and with *K-means* algorithm from the same library.
 
 ### 3. Testing on Mocked Dataset
 Steps for creating mocked dataset:
@@ -74,3 +74,23 @@ And at the picture above the result of the first clustering can be seen:
 </p>
 
 As can be seen, the algorithm works perfectly on the simple, training dataset.
+
+The learning time based on size of the training dataset can be seen at the picture below:
+<p align="center">
+  <img src = "https://imgur.com/Mj20djM.png"/>
+</p>
+
+The time complexity increases ,so the assumption about algorithm complexity was correct and this type of algorithm is not the best cost for big datasets.
+
+### Testing on Real Data
+In this part, the algorithm will be used for clustering on *Iris Dataset* and compared with the implementation of K-means from *Sklearn library* and with K-means algorithm from the same library.
+
+**Iris Dataset** consists of 150 samples with four attributes: sepal length, sepal width, petal length and petal width. Each sample has one of 3 labels (from 0 to 2). The dataset doesn't consist of any outlayers. 
+
+The visualisation of dataset can be seen at the picture below:
+<p align="center">
+  <img src = "https://imgur.com/D3zRaxA.png"/>
+</p>
+
+#### Comparison of Algorithms
+As the input to the every algorithm the array of size 150x4 were given. To predict the cluster for 
