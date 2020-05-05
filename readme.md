@@ -101,10 +101,9 @@ Because of small size of the dataset the cross validation was used, which means 
 The final result can be seen below:
 
 
-| Dataset          | Accuracy, test     | Accuracy, test | Differences, train | Differences, test |
-|-------------------------------------------------------------------------------------------------|
-| Algorithm        |   ----------- |-----------|-----------------|
-| My K-medoid      | 0.7974      | 0.0652    | 0.1374          |
-| Sklearn K-medoid | 0.7894      | 0.0695    | 0.1410          |
-| Sklearn K-means  | 0.8372      | 0.1455    | 0.0173          |
+|                  | Accuracy, test     | Accuracy, train | Differences, test | Differences, train |
+|                  |--------------------|----------------|--------------------|--------------------|
+| My K-medoid      |        62.42%      |     71.92%     |        18.79       |        14.04       |
+| Sklearn K-medoid |        68.00%      |     80.00%     |        16.00       |        10.00       |
+| Sklearn K-means  |        73.98%      |     88.88%     |        13.01       |        5.56        |
 
