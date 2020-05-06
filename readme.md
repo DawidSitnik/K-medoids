@@ -3,13 +3,12 @@
 ## Task Description
 This project aims to implement a k-medoids clustering algorithm and test it on real data. The algorithm should be able to operate on every amount of attributes and its final output should be similar to the output of sklearn implementation. 
 
-### Agenda
+### Table of Contents
 1. Algorithm description
 2. Implementation
 3. Testing on mocked data
-4. Testing time complexity
-5. Testing on real data
-6. Summary 
+4. Testing on real data
+5. Summary 
 
 ### 1. Algorithm Description
 K-medoids is a partitional clustering algorithm that is a modified version of the K-means algorithm. Both of them aim to minimize squared error, however, K-medoids is more robust to noise. In K-medoids data points are chosen to be medoids, but in K-means the means are chosen as centroids. 
