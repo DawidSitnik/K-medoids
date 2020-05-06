@@ -107,3 +107,4 @@ The final result can be seen below:
 | Sklearn K-medoid |        68.00%      |     80.00%     |        16.00       |        10.00       |
 | Sklearn K-means  |        73.98%      |     88.88%     |        13.01       |        5.56        |
 
+What could be seen in the table is that my own implementation of K-medoid is just 5.5% worse on testing and 8% on training dataset than original sklearn implementation in average. The mean value of differences for my algorithm are 19 and 14 for testing and training data consequently, while for SKlearn those numbers are 16 and 10. The highest score was achieved by Sklearn K_means, which got 73% on testing, 89% on training data and have made just 13 and 5.5 misstakes for the same data consequently.  
