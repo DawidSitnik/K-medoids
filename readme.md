@@ -79,7 +79,9 @@ The learning time based on size of the training dataset can be seen at the pictu
   <img src = "https://imgur.com/Mj20djM.png"/>
 </p>
 
-The time complexity increases, so the assumption about algorithm complexity was correct and this type of algorithm is not the best cost for big datasets.
+#### Time Complexity
+
+The graph is similar to x squared function, so the assumption about algorithm complexity was correct and this type of algorithm is not the best cost for big datasets. The places of the function in which it isn't monotonic result from convergence and are caused by the randomness of medioids initialization.
 
 ### 4. Testing on Real Data
 In this part, the algorithm will be used for clustering on *Iris Dataset* and compared with the implementation of K-means from *Sklearn library* and with the K-means algorithm from the same library.
