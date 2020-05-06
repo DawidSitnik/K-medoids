@@ -98,6 +98,12 @@ Each point were assigned to the set only once and were chosen randomly. The fina
 
 Because of small size of the dataset the cross validation was used, which means that testing phase were executed 200 times, and the accuracy and diff values are mean values from those iterations.
 
+The graphical representation of assigment from one iteration of cross-validation can be seen at the picture below:
+<p align="center">
+  <img src = "https://imgur.com/ELjiikE.png"/>
+</p>
+
+
 The final result can be seen below:
 
 
@@ -108,3 +114,17 @@ The final result can be seen below:
 | Sklearn K-means  |        73.98%      |     88.88%     |        13.01       |        5.56        |
 
 What could be seen in the table is that my own implementation of K-medoid is just 5.5% worse on testing and 8% on training dataset than original sklearn implementation in average. The mean value of differences for my algorithm are 19 and 14 for testing and training data consequently, while for SKlearn those numbers are 16 and 10. The highest score was achieved by Sklearn K_means, which got 73% on testing, 89% on training data and have made just 13 and 5.5 misstakes for the same data consequently.  
+
+#### Algorithms Robustness for Outlayers
+The last aspect that was checked was robustness for outlayers. Due to that 3 ponts with extremly high values were added to the training dataset, which visualization is as follows:
+<p align="center">
+  <img src = "https://imgur.com/SPp11Qu.png"/>
+</p>
+
+|                  | Accuracy, test     | Accuracy, train | Differences, test | Differences, train |
+|------------------|--------------------|----------------|--------------------|--------------------|
+| My K-medoid      |        61.22%      |     74.22%     |        19.39       |        17.14       |
+| Sklearn K-medoid |        64.00%      |     76.00%     |        18.00       |        12.00       |
+| Sklearn K-means  |        38.12%      |     41.28%     |        30.12       |        29.23        |
+
+As we assumed at the beggining, K-medoids is robust for outlayers, his scores didn't get worse too much comparing to the previous one. K-means however was significantly worse and is outlayer sensitive. 
