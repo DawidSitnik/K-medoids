@@ -1,4 +1,3 @@
-y_{i}
 # Implementation K-medoids algorithm with a selection of the second-best point as a medoids 
 
 ## Task Description
