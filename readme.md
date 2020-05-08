@@ -1,4 +1,4 @@
-# Implementation K-medoids algorithm with a selection of the second-best point as a medoids 
+# Implementation K-Medoids Algorithm With a Selection of the Second-Best Point as a Medoids 
 
 ## Task Description
 This project aims to implement a k-medoids clustering algorithm and test it on real data. The algorithm should be able to operate on every amount of attributes and its final output should be similar to the output of sklearn implementation. 
