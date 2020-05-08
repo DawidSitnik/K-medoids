@@ -81,10 +81,10 @@ The learning time based on size of the training dataset can be seen at the pictu
 
 #### Time Complexity
 
-The graph is similar to x squared function, so the assumption about algorithm complexity was correct and this type of algorithm is not the best cost for big datasets. The places of the function in which it isn't monotonic result from convergence and are caused by the randomness of medioids initialization.
+Despite some iterations in which initial medoids were extraordonary unfavourable, the graph is similar to x squared function. The assumption about algorithm complexity was correct and this type of algorithm is not the best choice for big datasets. 
 
 <p align="center">
-  <img src = "https://imgur.com/WT6PWdb.png"/>
+  <img src = "https://imgur.com/0dyJLPv.png"/>
 </p>
 
 ### 4. Testing on Real Data
