@@ -75,9 +75,6 @@ And at the picture above the result of the first clustering can be seen:
 As can be seen, the algorithm works perfectly on the simple, training dataset.
 
 The learning time based on size of the training dataset can be seen at the picture below:
-<p align="center">
-  <img src = "https://imgur.com/Mj20djM.png"/>
-</p>
 
 #### Time Complexity
 
